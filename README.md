@@ -1,4 +1,8 @@
 # Router - Activity / Fragment Navigation between Modules
+
+![Preview](https://github.com/spoonart1/router/blob/master/preview/ezgif.com-resize.gif)
+
+
 # How to Use?
 
 ### Pre-Initialization Gradle Dependency
