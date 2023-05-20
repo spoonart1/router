@@ -69,6 +69,7 @@ this is optional, as this Base class is only contains a router variable for simp
 You can define the variable in your xxActivity with below
 example:
 ```kotlin
+    //without BaseRouterActivity
     @AndroidEntryPoint //hilt android entry point
     class MainActivity : AppCompatActivity() {
         
@@ -76,6 +77,18 @@ example:
         lateinit var router: Router
         
         ...
+        
+        onCreate(...){
+            
+        }
+    }
+    
+    //with BaseRouterActivity
+    @AndroidEntryPoint //hilt android entry point
+    class MainActivity : BaseRouterActivity() {
+        onCreate(...){
+          router <-- already exist in base class
+        }
     }
 ```
 
