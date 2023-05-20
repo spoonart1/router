@@ -1,0 +1,7 @@
+activities:
+  main-activity: com.spoonart.routeractivity.MainActivity
+  spoonart-activity: com.spoonart.routeractivity.SpoonartActivity
+
+fragments:
+  fragment1: com.spoonart.fragment1
+  fragment2: com.spoonart.fragment2
