@@ -66,7 +66,8 @@ You can define the variable in your xxActivity with below
 example:
 ```kotlin
     @AndroidEntryPoint //hilt android entry point
-    class MainActivity : BaseRouterActivity() {
+    class MainActivity : AppCompatActivity() {
+        
         @Inject
         lateinit var router: Router
         
