@@ -17,7 +17,7 @@ abstract class BaseRouterFactory {
     abstract fun transmit(clazzName: String)
 }
 
-internal abstract class ActivityRouterFactory(
+abstract class ActivityRouterFactory(
     override val routerKey: RouterKey,
     private val finishAfter: Boolean = false,
     private val flag: Int? = null,
@@ -46,7 +46,7 @@ internal abstract class ActivityRouterFactory(
     }
 }
 
-internal abstract class FragmentRouterFactory(
+abstract class FragmentRouterFactory(
     private val fragmentTag: String? = null,
     private val fragmentId: Int? = null,
 ) : BaseRouterFactory() {

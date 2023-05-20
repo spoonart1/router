@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.spoonart.router.factory.ActivityRouterFactory
+import com.spoonart.router.factory.BaseRouterFactory
 import com.spoonart.router.implementation.Router
 import com.spoonart.router.implementation.RouterKey
 
@@ -41,5 +42,12 @@ fun AppCompatActivity.navigate(
             get() = applicationContext
     }
     routerFactory.bundle = bundle
+    router.routeTo(routerFactory)
+}
+
+fun AppCompatActivity.navigate(
+    router: Router,
+    routerFactory: BaseRouterFactory,
+) {
     router.routeTo(routerFactory)
 }
