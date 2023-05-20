@@ -25,7 +25,7 @@ when duplicate path found in the *.yaml*, an exception will thrown at **Runtime*
 ```yaml
 activities:
   your-activity1: com.your.domain.MainActivity
-  your-activity2: com.your.domain.HomeActivity
+  your-activity2: com.your.domain.MainActivity  <-- duplication will throw error during runtime initialization
   
 fragments:
   fragment1: com.spoonart.fragment1
