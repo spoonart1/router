@@ -65,7 +65,7 @@ fragments:
 ```
 
 ### 3. (Optional) Extends your Activity with BaseRouterActivity
-this is optional, as this Base class is only contains a router variable for simply implementation.
+this is optional, as this Base class is only contains a router variable to simplify the implementation.
 You can define the variable in your xxActivity with below
 example:
 ```kotlin
@@ -121,7 +121,7 @@ an extension is provided for better implementation
                 bundle: Bundle? = null,
 
                 //when set to true, by default will finish the corresponding activity (caller),
-                //unless you for custom RouterFactory
+                //unless for custom RouterFactory
                 //(optional)
                 finishAfter: Boolean = false,
 
