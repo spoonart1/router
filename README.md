@@ -24,6 +24,9 @@ fragments:
   fragment1: com.spoonart.fragment1
   fragment2: com.spoonart.fragment2
 ```
+### Place your *.yaml* in assets app level directory
+![yaml placement](https://github.com/spoonart1/router/blob/master/preview/directory.png)
+
 #### DON'T
 when duplicate path found in the *.yaml*, an exception will thrown at **Runtime**
 ```yaml
