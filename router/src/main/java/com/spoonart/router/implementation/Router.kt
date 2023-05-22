@@ -19,6 +19,7 @@ interface RouterKey {
         }
     }
 }
+
 /**
  * an interface that exposes the function to navigate to desired scene
  */
@@ -31,7 +32,7 @@ interface Router {
  * you can provide this class as Singleton with Hilt/Dagger injection method
  */
 class RouterImpl @Inject constructor(
-    yamlReader: YamlReader
+    yamlReader: YamlReader,
 ) : Router {
 
     private val routes = yamlReader.routes

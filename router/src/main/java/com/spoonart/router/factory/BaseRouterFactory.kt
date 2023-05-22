@@ -47,6 +47,7 @@ abstract class ActivityRouterFactory(
 }
 
 abstract class FragmentRouterFactory(
+    override val routerKey: RouterKey,
     private val fragmentTag: String? = null,
     private val fragmentId: Int? = null,
 ) : BaseRouterFactory() {
