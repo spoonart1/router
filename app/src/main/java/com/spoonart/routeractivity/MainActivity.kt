@@ -39,10 +39,10 @@ class MainActivity : BaseRouterActivity() {
 //            )
 
             showAlertDialog()
-//            navigate(
-//                router = router,
-//                routerFactory = routerFactory
-//            )
+            navigate(
+                router = router,
+                routerFactory = routerFactory
+            )
         }
     }
 }
