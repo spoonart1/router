@@ -1,6 +1,8 @@
 package com.spoonart.routeractivity
 
 import android.content.Context
+import com.spoonart.painter.impl.Painter
+import com.spoonart.painter.impl.PainterImpl
 import com.spoonart.router.implementation.Router
 import com.spoonart.router.implementation.RouterImpl
 import com.spoonart.router.utils.YamlReader
@@ -14,6 +16,12 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 class AppModule {
+
+    @Provides
+    @Singleton
+    fun providePainter(): Painter {
+        return PainterImpl()
+    }
 
     @Provides
     @Singleton

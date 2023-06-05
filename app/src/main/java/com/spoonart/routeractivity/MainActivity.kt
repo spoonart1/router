@@ -1,9 +1,11 @@
 package com.spoonart.routeractivity
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import com.spoonart.router.base.BaseRouterActivity
 import com.spoonart.router.factory.ActivityRouterFactory
 import com.spoonart.router.utils.navigate
@@ -36,10 +38,19 @@ class MainActivity : BaseRouterActivity() {
 //                flag = Intent.FLAG_ACTIVITY_NEW_TASK
 //            )
 
-            navigate(
-                router = router,
-                routerFactory = routerFactory
-            )
+            showAlertDialog()
+//            navigate(
+//                router = router,
+//                routerFactory = routerFactory
+//            )
         }
     }
+}
+
+
+fun Activity.showAlertDialog(){
+    AlertDialog.Builder(this)
+        .setTitle("Percobaan")
+        .setNeutralButton("OK", null)
+        .show()
 }
