@@ -1,0 +1,45 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Checkout') {
+      steps {
+        // Checkout your Git repository
+        git 'https://github.com/spoonart1/router.git'
+      }
+    }
+
+    stage('Unit Tests') {
+      steps {
+        // Run your Android unit tests using Gradle
+        //sh './gradlew test'
+        println 'running unit test'
+      }
+    }
+
+    stage('Build APK') {
+      steps {
+        // Build your Android APK using Gradle
+        //sh './gradlew assembleDebug'
+        println 'asmbling debug apk ...'
+      }
+    }
+
+//     stage('Lint') {
+//       steps {
+//         // Run Android Lint for static code analysis
+//         sh './gradlew lint'
+//       }
+//     }
+
+    stage('Publish to Play Store') {
+//       steps {
+//         // Publish your APK to the Play Store
+//         withCredentials([string(credentialsId: 'your-google-play-credentials-id', variable: 'GOOGLE_PLAY_JSON_KEY')]) {
+//           sh './gradlew publishApk -PgooglePlayJsonKey="$GOOGLE_PLAY_JSON_KEY"'
+//         }
+//       }
+        println 'publishing apk'
+    }
+  }
+}
