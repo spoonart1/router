@@ -7,7 +7,6 @@ pipeline {
     stage('Checkout') {
       steps {
         // Checkout your Git repository
-        sh 'echo checking out ...'
         git 'https://github.com/spoonart1/router.git'
       }
     }
