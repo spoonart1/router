@@ -33,13 +33,13 @@ pipeline {
 //     }
 
     stage('Publish to Play Store') {
-//       steps {
-//         // Publish your APK to the Play Store
+      steps {
+      println 'publishing apk'
+        // Publish your APK to the Play Store
 //         withCredentials([string(credentialsId: 'your-google-play-credentials-id', variable: 'GOOGLE_PLAY_JSON_KEY')]) {
 //           sh './gradlew publishApk -PgooglePlayJsonKey="$GOOGLE_PLAY_JSON_KEY"'
 //         }
-//       }
-        println 'publishing apk'
+      }
     }
   }
 }
