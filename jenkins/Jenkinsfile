@@ -1,12 +1,11 @@
 pipeline {
-  agent {
-    label 'Android'
-  }
+  agent any
 
   stages {
     stage('Checkout') {
       steps {
         // Checkout your Git repository
+        sh 'echo "checking out ..."'
         git 'https://github.com/spoonart1/router.git'
       }
     }
