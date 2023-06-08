@@ -12,7 +12,7 @@ pipeline {
     stage('Retrieve Pull Request Data') {
        steps {
           script {
-            def utils = load './PullRequestUtils.groovy'
+            def utils = load 'jenkins/PullRequestUtils.groovy'
             def payload = readJSON text: env.BODY
             def data = utils.getPullRequestData(payload)
 
