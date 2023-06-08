@@ -15,7 +15,9 @@ pipeline {
        steps {
           script {
             def utils = load 'jenkins/PullRequestUtils.groovy'
-//             def payloadString = build.buildVariableResolver.resolve("payload")
+            env.getEnvironment().each { key, value ->
+                println "HOOK => ${key}: ${value}"
+            }
             def payload = readJSON text: env.CHANGE_PAYLOAD
             def data = utils.getPullRequestData(payload)
 
