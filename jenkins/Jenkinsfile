@@ -9,6 +9,19 @@ pipeline {
       }
     }
 
+    stage('Retrieve Pull Request Data'){
+       steps {
+          def utils = load 'PullRequestUtils.groovy'
+          def payload = readJSON text: env.CHANGE_PAYLOAD
+          def data = utils.getPullRequestData(payload)
+
+          // Print the retrieved data
+          echo "Pull Request ID: ${data.id}"
+          echo "Pull Request Title: ${data.title}"
+          echo "Pull Request Author: ${data.author}"
+       }
+    }
+
     stage('Unit Tests') {
       steps {
         // Run your Android unit tests using Gradle
