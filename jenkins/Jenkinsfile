@@ -13,7 +13,7 @@ pipeline {
        steps {
           script {
             def utils = load './PullRequestUtils.groovy'
-            def payload = readJSON file: env.CHANGE_PAYLOAD
+            def payload = readJSON text: env.BODY
             def data = utils.getPullRequestData(payload)
 
             // Print the retrieved data
