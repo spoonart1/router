@@ -24,6 +24,7 @@ pipeline {
 //             println "Pull Request ID: ${data.id}"
 //             println "Pull Request Title: ${data.title}"
 //             println "Pull Request Author: ${data.author}"
+
           }
        }
     }
