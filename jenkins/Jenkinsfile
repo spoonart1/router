@@ -1,3 +1,5 @@
+import hudson.model.*
+
 pipeline {
   agent any
 
@@ -13,7 +15,8 @@ pipeline {
        steps {
           script {
             def utils = load 'jenkins/PullRequestUtils.groovy'
-            def payload = readJSON text: env.BODY
+            def payloadString = build.buildVariableResolver.resolve("payload")
+            def payload = new groovy.json.JsonSlurper().parseText(payloadString)
             def data = utils.getPullRequestData(payload)
 
             // Print the retrieved data
