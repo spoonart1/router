@@ -16,7 +16,7 @@ pipeline {
           script {
             def utils = load 'jenkins/PullRequestUtils.groovy'
 //             def payloadString = build.buildVariableResolver.resolve("payload")
-            def payload = readJSON text: env.BODY
+            def payload = readJSON text: env.CHANGE_PAYLOAD
             def data = utils.getPullRequestData(payload)
 
             // Print the retrieved data
