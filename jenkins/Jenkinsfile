@@ -15,16 +15,15 @@ pipeline {
        steps {
           script {
             def utils = load 'jenkins/PullRequestUtils.groovy'
-            env.getEnvironment().each { key, value ->
-                println "HOOK => ${key}: ${value}"
-            }
-            def payload = readJSON text: env.CHANGE_PAYLOAD
-            def data = utils.getPullRequestData(payload)
-
-            // Print the retrieved data
-            println "Pull Request ID: ${data.id}"
-            println "Pull Request Title: ${data.title}"
-            println "Pull Request Author: ${data.author}"
+            println "payload: $payload"
+//             def payloadString = build.buildVariableResolver.resolve("payload")
+//             def payload = new groovy.json.JsonSlurper().parseText(payloadString)
+//             def data = utils.getPullRequestData(payload)
+//
+//             // Print the retrieved data
+//             println "Pull Request ID: ${data.id}"
+//             println "Pull Request Title: ${data.title}"
+//             println "Pull Request Author: ${data.author}"
           }
        }
     }
